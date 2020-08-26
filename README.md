@@ -1,25 +1,14 @@
-# README
+# INCH BACKEND TEST
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ * Rails 6
 
-Things you may want to cover:
+Importing Person and Building from CSV files  
+Sample files can be found under `csv` directory
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+## Models:
+ * **Person**
+ * **Building**
+ * **AttributeVersion:** Belongs to models with versionable attributes, used to store previous values of the attribute  
+ * **VersionableConcern:** Module used to manage attribute versions and import rules
+ * **ImportableConcern:** Module used to add import class method to versionable models
+ 
