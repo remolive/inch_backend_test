@@ -50,8 +50,8 @@ RSpec.describe Person, type: :model do
         firstnames = %w[Henri Jean]
         firstnames_updated = %w[Patrick Martin]
 
-        persons = Person.import_from_csv(file)
-        persons.each_with_index do |person, index|
+        Person.import_from_csv(file)
+        Person.all.each_with_index do |person, index|
           person.update(email: emails_updated[index], firstname: firstnames_updated[index])
         end
 
